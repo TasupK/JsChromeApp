@@ -9,7 +9,6 @@ function saveName(text) {
     localStorage.setItem(USER_LS, text);
 }
 
-
 function handleSubmit(event) {
     event.preventDefault();
     const currentValue = input.value;
@@ -17,6 +16,8 @@ function handleSubmit(event) {
     saveName(currentValue);
 }
       
+/////////////////////////////////////////////
+
 function askForName() {
     form.classList.add(SHOWING_CN);
     form.addEventListener("submit", handleSubmit);
@@ -27,6 +28,8 @@ function paintGreeting(text) {
   greeting.classList.add(SHOWING_CN);
   greeting.innerText = `Hello ${text}`;
 }
+
+///////////////////////////////////////////
 
 function loadName() {
   const currentUser = localStorage.getItem(USER_LS);
